@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Travel Planner</title><link rel="stylesheet" href="styles/style.css"><script defer="defer" src="main.js"></script><link href="styles/style.css" rel="stylesheet"></head><body><header><h1>Travel Planner</h1><h3>Welcome, User.</h3></header><main><form id="travel-form"><label for="city">City:</label> <input id="city" placeholder="Enter location" required> <label for="date">Departure Date:</label> <input type="date" id="date" required> <button type="submit" class="btn">Plan Trip</button></form><div id="trips-container"></div></main><script src="main.js"></script><script>// Ensure Service Worker is registered correctly
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker
+          .register('./service-worker.js')
+          .then((registration) => {
+            console.log('Service Worker registered with scope:', registration.scope);
+          })
+          .catch((error) => {
+            console.error('Service Worker registration failed:', error);
+          });
+      });
+    }</script></body></html>
