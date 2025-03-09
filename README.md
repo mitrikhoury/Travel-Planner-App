@@ -36,3 +36,5 @@ The **Travel Planner** is a dynamic web application designed to help users plan 
 - **Dotenv** - For securely managing environment variables such as API keys.
 
 
+### Node.js Version  
+This project requires **Node.js v22.14.0**.
